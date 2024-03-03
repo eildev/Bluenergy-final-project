@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Inter" sans-serif;
+    src: url("./assets/fonts/Inter/Inter-Black.ttf");
+
+    font-family: "Karla", sans-serif;
+    src: url("./assets/fonts/Karla/Karla-Regular.ttf");
+
+    font-family: 'Titillium Web', sans-serif;
+    src: url("./assets/fonts//Titillium_Web/TitilliumWeb-Regular.ttf");
+}
+
+
+body {
+    font-family: "Inter" sans-serif;
+    color: #707070;
+    background: #F6FCFC !important;
+}
+
+.font-karla {
+    font-family: "Karla", sans-serif;
+}
+
+
+.swiper-pagination-bullet {
+    height: 30px;
+    width: 30px;
+    border-radius: 7px;
+    margin-right: 20px;
+    background: #e2f3fb;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #1FBEF9;
+}
+
+.pageLoader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .7);
+    z-index: 9999999999999999999999;
+}

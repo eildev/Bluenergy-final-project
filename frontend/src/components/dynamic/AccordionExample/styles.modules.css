@@ -1,0 +1,14 @@
+.szh-accordion {
+    width: 100%;
+}
+
+.szh-accordion__item {
+    width: 100%;
+    padding: 50px 0 50px;
+    border-bottom: 1px solid #1FBEF9;
+}
+
+.szh-accordion__item h2 button.szh-accordion__item-btn {
+    color: #1FBEF9 !important;
+    font-size: 24px !important;
+}

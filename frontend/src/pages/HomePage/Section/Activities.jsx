@@ -1,0 +1,28 @@
+import { useEffect, useState } from "react";
+import Container from "../../../components/dynamic/Container/Container";
+// import ActivitiesData from "../../../data/ActivitiesData";
+import ActivitiesTask from "../../../element/ActivitiesTask";
+import port from "../../../lib/port";
+
+const Activities = () => {
+  const [activity, SetActivity] = useState([]);
+  // console.log(activity);
+  useEffect(() => {
+    let url = port("overview/data");
+    fetch(url)
+      .then((response) => response.json())
+      .then((responseData) => SetActivity(responseData.allData));
+  }, []);
+
+  return (
+    <Container bgColor="bg-gray">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-14 font-karla">
+        {activity.map((tasks) => (
+          <ActivitiesTask key={tasks.id} tasks={tasks} />
+        ))}
+      </div>
+    </Container>
+  );
+};
+
+export default Activities;
