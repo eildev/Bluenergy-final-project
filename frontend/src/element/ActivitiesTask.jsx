@@ -6,7 +6,7 @@ import path from "../lib/path";
 const ActivitiesTask = ({ tasks }) => {
   const { title, icon, experience } = tasks;
   return (
-    <div className="relative place-self-center w-[250px] pt-8 pb-5 bg-body text-center border-secondary border">
+    <div className="relative place-self-center w-[250px] pt-8 pb-5 bg-body text-center border-secondary border rounded">
       <div className="absolute -top-[30px] left-1/2 -translate-x-1/2 h-14 bg-body w-14 rounded-full grid border-secondary border shadow-sm">
         <motion.span
           variants={fadeIn("down", 0.3)}

@@ -1,5 +1,5 @@
 import Container from "../../../components/dynamic/Container/Container";
-import map from "../../../assets/img/map/map.png";
+import map from "../../../assets/img/map/world-map.svg";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../lib/variants";
 

@@ -1,5 +1,5 @@
 import Banner from "../../components/dynamic/Banner/Banner";
-import bannerImage from "../../assets/img/banner/bannerimg.png";
+import bannerImage from "../../assets/img/banner/news-banner.jpg";
 import NewsLetter from "./Section/NewsLetter";
 import AllNews from "./Section/AllNews";
 import AllNewsPagination from "./Section/AllNewsPagination";

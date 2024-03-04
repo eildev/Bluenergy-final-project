@@ -29,8 +29,10 @@ const Card = ({ data }) => {
         </span>
       </div>
       <div>
-        <h4 className="text-lg font-bold mb-5">{services_details_title}</h4>
-        <p className="mb-5">{services_details_description}</p>
+        <h4 className="text-lg font-bold mb-5 text-white">
+          {services_details_title}
+        </h4>
+        <p className="mb-5 text-white">{services_details_description}</p>
         <Button title="Learn More" className="bg-primary text-white" />
       </div>
     </motion.div>

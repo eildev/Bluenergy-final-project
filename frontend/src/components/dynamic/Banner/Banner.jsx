@@ -9,9 +9,9 @@ const Banner = ({ bannerTitle, bannerImage, bannerText }) => {
       whileInView={"show"}
       viewport={{ once: false, amount: 0.3 }}
       style={{ backgroundImage: `url(${bannerImage})` }}
-      className={`min-h-[60vh] flex justify-center items-center bg-no-repeat bg-cover bg-center`}
+      className={`min-h-[80vh] flex justify-center items-center bg-no-repeat bg-cover bg-center banner`}
     >
-      <div className="text-center md:w-1/2 w-full text-white mx-auto">
+      <div className="text-center md:w-1/2 w-full text-white mx-auto z-10">
         <h2 className="font-bold font-karla lg:text-5xl md:text-3xl text-2xl mb-2">
           {bannerTitle}
         </h2>

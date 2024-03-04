@@ -4,13 +4,17 @@ import ImageBoxWithPlayButton from "../../../element/ImageBoxWithPlayButton";
 import icon from "../../../assets/icons/main/award.svg";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../lib/variants";
+import Image from "../../../element/Image";
+import achivement from "../../../assets/img/achivement/achivement.jpg";
 
 const Achievement = () => {
   return (
     <Container>
       <div className="flex lg:justify-between lg:flex-row flex-col items-start lg:gap-20 gap-10">
         <div className="lg:w-[45%] lg:px-10 w-full">
-          <ImageBoxWithPlayButton className="h-[500px] w-full relative rounded-md" />
+          <ImageBoxWithPlayButton className="h-[500px] w-full relative rounded-md">
+            <Image src={achivement}></Image>
+          </ImageBoxWithPlayButton>
         </div>
 
         <motion.div
@@ -25,7 +29,7 @@ const Achievement = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="text-primary font-bold text-2xl mb-5"
+            className="text-secondary font-bold text-2xl mb-5"
           >
             We Have Several Achievement In Engineering Sector
           </motion.h2>
@@ -59,7 +63,7 @@ const Achievement = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
-                className="flex gap-2 items-center text-primary text-lg font-bold mb-5"
+                className="flex gap-2 items-center text-white text-lg font-bold mb-5"
               >
                 <img src={icon} className="h-[30px]" alt="" /> Award
               </motion.span>
@@ -68,7 +72,7 @@ const Achievement = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
-                className="text-primary font-bold text-xl mb-2"
+                className="text-white font-bold text-xl mb-2"
               >
                 Best Company
               </motion.h4>
@@ -77,6 +81,7 @@ const Achievement = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
+                className=" text-white"
               >
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Eligendi, saepe.
@@ -102,14 +107,14 @@ const Achievement = () => {
                   <FaStar />
                   <FaStar />
                 </span>
-                <span>(5020 Reviews)</span>
+                <span className="text-white">(5020 Reviews)</span>
               </motion.div>
               <motion.h4
                 variants={fadeIn("left", 0.8)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
-                className="text-primary font-bold text-xl mb-2"
+                className="text-white font-bold text-xl mb-2"
               >
                 High Rating reviews
               </motion.h4>
@@ -118,6 +123,7 @@ const Achievement = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
+                className=" text-white"
               >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
                 praesentium.

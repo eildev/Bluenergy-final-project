@@ -11,11 +11,11 @@ const Activities = () => {
     let url = port("overview/data");
     fetch(url)
       .then((response) => response.json())
-      .then((responseData) => SetActivity(responseData.allData));
+      .then((responseData) => SetActivity(responseData.allData.slice(0, 3)));
   }, []);
 
   return (
-    <Container bgColor="bg-gray">
+    <Container bgColor="bg-primary">
       <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-14 font-karla">
         {activity.map((tasks) => (
           <ActivitiesTask key={tasks.id} tasks={tasks} />

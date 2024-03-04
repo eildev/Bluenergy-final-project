@@ -15,15 +15,17 @@ const OurAllServices = () => {
     let url = port("services/details");
     fetch(url)
       .then((response) => response.json())
-      .then((responseData) => setServices(responseData.allData));
+      .then((responseData) => setServices(responseData.allData.slice(0, 9)));
   }, []);
   return (
     <Container bgColor="bg-secondary">
       <SectionHeader
-        sectionHeaderContainerClassNames="text-center mb-10"
-        sectionHeaderParagraphClassName=""
+        sectionHeaderContainerClassNames="text-center mb-10 "
+        sectionHeaderHeadingClassNames="text-white"
+        sectionHeaderParagraphClassName="text-white"
         title="Our all Services"
-        description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
+        description="At Bluenergy, we redefine power solutions with our Generator Assembly and Supply services, 
+        embodying reliability, innovation, and sustainability"
         headerDescription={true}
       />
 
@@ -35,7 +37,7 @@ const OurAllServices = () => {
 
       <div className="flex sm:justify-between justify-center items-center mt-10">
         <Header
-          className="text-md font-bold capitalize hidden sm:block"
+          className="text-md font-bold capitalize hidden sm:block "
           direction="right"
         >
           our more services
@@ -45,7 +47,7 @@ const OurAllServices = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
-          className="hidden lg:block"
+          className="hidden lg:block text-white"
         >
           Lorem ipsum dolor sit amet consectetur, adipisicing elit.
         </motion.p>

@@ -27,6 +27,7 @@ export default {
     borderColor: {
       primary: "#64b15f",
       secondary: "#2552a3",
+      white: "#FFFFFF",
     },
     outlineColor: {
       primary: "#64b15f",

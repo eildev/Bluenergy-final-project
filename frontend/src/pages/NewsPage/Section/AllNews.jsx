@@ -10,7 +10,7 @@ const AllNews = () => {
     let url = port("news");
     fetch(url)
       .then((response) => response.json())
-      .then((data) => setNews(data.allData));
+      .then((data) => setNews(data.allData.slice(0, 9)));
   }, []);
 
   return (

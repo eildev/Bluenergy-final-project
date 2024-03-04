@@ -15,7 +15,7 @@ const OurServices = () => {
     let url = port("services/details");
     fetch(url)
       .then((response) => response.json())
-      .then((responseData) => setServices(responseData.allData));
+      .then((responseData) => setServices(responseData.allData.slice(0, 6)));
   }, []);
   return (
     <Container>
@@ -42,9 +42,6 @@ const OurServices = () => {
         {services.map((data) => (
           <ServicesCard key={data.id} data={data} />
         ))}
-        {/* {servicesCardData.map((data) => (
-          <ServicesCard key={data.id} data={data} />
-        ))} */}
       </div>
     </Container>
   );

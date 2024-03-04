@@ -2,7 +2,7 @@ import { fadeIn } from "../../../lib/variants";
 import ImageBox from "../ImageBox/ImageBox";
 import { motion } from "framer-motion";
 import image2 from "../../../assets/img/about/about-2.jpg";
-import image3 from "../../../assets/img/about/about-3.jpeg";
+import image3 from "../../../assets/img/about/about-3.jpg";
 import path from "../../../lib/path";
 
 const Hero = ({ data }) => {

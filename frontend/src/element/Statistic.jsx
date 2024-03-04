@@ -11,8 +11,8 @@ const Statistic = ({ className }) => {
         whileInView={"show"}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <span className="text-primary font-bold text-3xl">10k++</span>
-        <p>Subscriber</p>
+        <span className="text-secondary font-bold text-3xl">10k++</span>
+        <p className="text-secondary">Subscriber</p>
       </motion.div>
       <motion.div
         variants={fadeIn("down", 0.5)}
@@ -20,8 +20,8 @@ const Statistic = ({ className }) => {
         whileInView={"show"}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <span className="text-primary font-bold text-3xl">50++</span>
-        <p>Client</p>
+        <span className="text-secondary font-bold text-3xl">50++</span>
+        <p className="text-secondary">Client</p>
       </motion.div>
       <motion.div
         variants={fadeIn("down", 0.6)}
@@ -29,8 +29,8 @@ const Statistic = ({ className }) => {
         whileInView={"show"}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <span className="text-primary font-bold text-3xl">98%</span>
-        <p>Success</p>
+        <span className="text-secondary font-bold text-3xl">98%</span>
+        <p className="text-secondary">Success</p>
       </motion.div>
     </div>
   );

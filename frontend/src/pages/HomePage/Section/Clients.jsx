@@ -20,7 +20,7 @@ const Clients = () => {
     let url = port("testimonial");
     fetch(url)
       .then((response) => response.json())
-      .then((responseData) => setTestimonial(responseData.allData));
+      .then((responseData) => setTestimonial(responseData.allData.slice(0, 4)));
   }, []);
   return (
     <Container bgColor="bg-secondary my-10">

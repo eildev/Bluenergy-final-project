@@ -27,7 +27,7 @@ const LatestNews = () => {
     let url = port("news");
     fetch(url)
       .then((response) => response.json())
-      .then((responseData) => setNews(responseData.allData));
+      .then((responseData) => setNews(responseData.allData.slice(0, 1)));
   }, []);
   return (
     <Container bgColor="bg-body">

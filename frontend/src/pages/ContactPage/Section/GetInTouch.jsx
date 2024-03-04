@@ -16,7 +16,7 @@ const GetInTouch = () => {
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
         >
-          <Header className="text-3xl mb-5">Get In Touch</Header>
+          <Header className="text-3xl mb-5 text-secondary">Get In Touch</Header>
           <p className="mb-5">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
             officia sequi quibusdam quo, atque necessitatibus.

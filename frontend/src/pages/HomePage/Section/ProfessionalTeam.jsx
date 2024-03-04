@@ -15,7 +15,9 @@ const ProfessionalTeam = () => {
     let url = port("managing-team");
     fetch(url)
       .then((response) => response.json())
-      .then((responseData) => setManagingTeams(responseData.allData));
+      .then((responseData) =>
+        setManagingTeams(responseData.allData.slice(0, 3))
+      );
   }, []);
   return (
     <Container>

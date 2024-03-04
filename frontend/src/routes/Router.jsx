@@ -7,6 +7,7 @@ import ServicesPage from "../pages/ServicesPage/ServicesPage";
 import NewsPage from "../pages/NewsPage/NewsPage";
 import GalleryPage from "../pages/GalleryPage/GalleryPage";
 import ContactPage from "../pages/ContactPage/ContactPage";
+import Error from "../pages/Error/Error";
 
 export const router = createBrowserRouter([
   {
@@ -42,5 +43,9 @@ export const router = createBrowserRouter([
         element: <ContactPage />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <Error />,
   },
 ]);

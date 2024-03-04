@@ -15,7 +15,7 @@ const Gallery = ({ gallery }) => {
     let url = port("category");
     fetch(url)
       .then((response) => response.json())
-      .then((responseData) => setCategory(responseData.allData));
+      .then((responseData) => setCategory(responseData.allData.slice(0, 6)));
   }, []);
   return (
     <Container>

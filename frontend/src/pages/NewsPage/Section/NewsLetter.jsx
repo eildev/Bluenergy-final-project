@@ -9,6 +9,13 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import NewsBox from "../../../element/NewsBox";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../lib/variants";
+import newsImage1 from "../../../assets/img/news/news-1.jpg";
+import newsImage2 from "../../../assets/img/news/news-2.jpg";
+import newsImage3 from "../../../assets/img/news/news-3.jpg";
+import newsImage4 from "../../../assets/img/news/news-4.jpg";
+import newsImage5 from "../../../assets/img/news/news-5.jpg";
+import newsImage6 from "../../../assets/img/news/news-6.jpeg";
+import Image from "../../../element/Image";
 
 const NewsLetter = () => {
   return (
@@ -31,6 +38,7 @@ const NewsLetter = () => {
                   <FaRegHeart />
                 </span>
               </IconStatus>
+              <Image src={newsImage1} />
             </ImageBox>
           </div>
           <div>
@@ -64,6 +72,7 @@ const NewsLetter = () => {
                   <FaRegHeart />
                 </span>
               </IconStatus>
+              <Image src={newsImage2} />
             </ImageBox>
           </div>
           <div>
@@ -181,6 +190,7 @@ const NewsLetter = () => {
                   <FaRegHeart />
                 </span>
               </IconStatus>
+              <Image src={newsImage3} />
             </ImageBox>
           </div>
           <div>
@@ -205,12 +215,12 @@ const NewsLetter = () => {
           className="lg:pl-20"
         >
           <div className="bg-secondary w-full rounded-md shadow-sm p-10">
-            <Header className="mb-10">Recent Post</Header>
+            <Header className="mb-10 text-white">Recent Post</Header>
             <div className="grid gap-5">
-              <NewsBox />
-              <NewsBox />
-              <NewsBox />
-              <NewsBox />
+              <NewsBox image={newsImage4} />
+              <NewsBox image={newsImage5} />
+              <NewsBox image={newsImage6} />
+              <NewsBox image={newsImage2} />
             </div>
           </div>
         </motion.div>

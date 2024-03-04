@@ -13,9 +13,9 @@ const AllNewsCard = ({ data }) => {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.3 }}
-      className="rounded bg-white"
+      className="rounded-md bg-white overflow-hidden"
     >
-      <div className="h-[200px] bg-gray rounded relative ">
+      <div className="h-[200px] relative ">
         <img
           className="object-cover w-full h-full"
           src={path("news", image)}

@@ -1,5 +1,5 @@
 import Banner from "../../components/dynamic/Banner/Banner";
-import image from "../../assets/img/banner/bannerimg.png";
+import image from "../../assets/img/banner/services-banner.jpg";
 import BenefitsWithOurService from "./Section/BenefitsWithOurService";
 import AboutOurBestService from "./Section/AboutOurBestService";
 import OurAllServices from "./Section/OurAllServices";
@@ -9,9 +9,7 @@ const ServicesPage = () => {
     <>
       <Banner
         bannerImage={image}
-        bannerText=" Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Provident, nisi.  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Provident, nisi."
+        bannerText="At Bluenergy, we offer supply/trading, engineering consulting, and pioneering solutions in renewable energy and energy efficiency for a sustainable future."
         bannerTitle="Our Services"
       />
       <BenefitsWithOurService />

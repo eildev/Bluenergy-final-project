@@ -15,8 +15,8 @@ const Quote = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="mb-10"
         >
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam,
-          nesciunt. Lorem ipsum dolor sit amet.
+          Connect with us for innovative solutions. Get in touch with Bluenergy
+          and let`s build a better future together!
         </motion.p>
       </div>
       <InputForm />

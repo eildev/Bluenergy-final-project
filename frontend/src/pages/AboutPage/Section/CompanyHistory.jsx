@@ -5,12 +5,13 @@ import { fadeIn } from "../../../lib/variants";
 
 const CompanyHistory = () => {
   return (
-    <Container bgColor="bg-secondary">
+    <Container bgColor="bg-primary">
       <SectionHeader
+        sectionHeaderHeadingClassNames="text-white"
         borderBottom={true}
         title={"Our Company History"}
         sectionHeaderContainerClassNames={"text-center mb-10"}
-        sectionHeaderSpanClassName={"mx-auto my-3 w-[150px]"}
+        sectionHeaderSpanClassName="bg-[#fff] mx-auto my-3 w-[150px] "
       />
 
       <div className="text-center">
@@ -19,7 +20,7 @@ const CompanyHistory = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
-          className=""
+          className=" text-white"
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
           ducimus dignissimos. Doloremque omnis, culpa quae blanditiis at hic
@@ -35,6 +36,7 @@ const CompanyHistory = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
+          className="text-white"
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsa
           omnis beatae ratione, illum accusamus non voluptatem, distinctio
