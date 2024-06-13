@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../lib/variants";
 import path from "../lib/path";
+import limitText from "../lib/limitText";
 const WhyChooseUsServices = ({ whyChooseUs }) => {
   const { icon, title, description } = whyChooseUs;
 
-  const truncatedDescription =
-    description.length > 150 ? `${description.slice(0, 150)}...` : description;
   return (
     <div className="flex gap-3">
       <motion.span
@@ -38,7 +37,7 @@ const WhyChooseUsServices = ({ whyChooseUs }) => {
           viewport={{ once: false, amount: 0.3 }}
           className=" text-xs"
         >
-          {truncatedDescription}
+          {limitText(description, 150)}
         </motion.p>
       </div>
     </div>

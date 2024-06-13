@@ -12,8 +12,6 @@ const SectionHeader = ({
   borderBottom,
   headerDescription,
 }) => {
-  // const { description } = data;
-  // console.log(data);
   return (
     <div className={cn("my-5", sectionHeaderContainerClassNames)}>
       <motion.h2

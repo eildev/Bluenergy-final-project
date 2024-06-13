@@ -4,8 +4,6 @@ import SectionHeader from "../../../components/shared/SectionHeader/SectionHeade
 import Button from "../../../element/Button";
 import Card from "../../../element/Card";
 import Header from "../../../element/Header";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../../lib/variants";
 import { useEffect, useState } from "react";
 import port from "../../../lib/port";
 
@@ -42,15 +40,6 @@ const OurAllServices = () => {
         >
           our more services
         </Header>
-        <motion.p
-          variants={fadeIn("up", 0.5)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.3 }}
-          className="hidden lg:block text-white"
-        >
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        </motion.p>
 
         <Button
           title="View All"

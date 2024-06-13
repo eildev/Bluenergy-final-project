@@ -15,7 +15,7 @@ const GalleryCard = ({ data }) => {
       className="w-full"
     >
       <div className="mb-2">
-        <ImageBox>
+        <ImageBox className="w-full">
           <Image src={path("gallery", gallery_image)} alt="gallery Image" />
         </ImageBox>
       </div>

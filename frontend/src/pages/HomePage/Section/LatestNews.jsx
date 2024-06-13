@@ -15,20 +15,33 @@ import image2 from "../../../assets/img/news/news-2.jpg";
 import image3 from "../../../assets/img/news/news-3.jpg";
 import image4 from "../../../assets/img/news/news-4.jpg";
 // import image5 from "../../../assets/img/news/news-5.jpg";
-import image6 from "../../../assets/img/news/news-6.jpeg";
+// import image6 from "../../../assets/img/news/news-6.jpeg";
 import { useEffect, useState } from "react";
 import port from "../../../lib/port";
 import path from "../../../lib/path";
+import { Link } from "react-router-dom";
 
 const LatestNews = () => {
   const [news, setNews] = useState([]);
-  // console.log(news);
   useEffect(() => {
     let url = port("news");
     fetch(url)
       .then((response) => response.json())
       .then((responseData) => setNews(responseData.allData.slice(0, 1)));
   }, []);
+
+  const [news2, setNews2] = useState({});
+  useEffect(() => {
+    let url = port("news");
+    fetch(url)
+      .then((response) => response.json())
+      .then((responseData) => {
+        const [, secondElement] = responseData.allData;
+        setNews2(secondElement);
+      });
+  }, []);
+
+  // console.log(news2);
   return (
     <Container bgColor="bg-body">
       <SectionHeader
@@ -37,14 +50,14 @@ const LatestNews = () => {
         sectionHeaderSpanClassName="bg-primary mx-auto my-3"
         sectionHeaderParagraphClassName=""
         title="Latest News"
-        description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
+        description="Global initiative surpasses target for planting trees, raising hope for restoring lost forests and combating climate change"
         borderBottom={true}
         headerDescription={true}
       />
 
       <div className="flex lg:justify-between flex-col lg:flex-row lg:items-start gap-10">
         <motion.div
-          variants={fadeIn("right", 0.5)}
+          variants={fadeIn("up", 0.5)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
@@ -94,7 +107,7 @@ const LatestNews = () => {
         </motion.div>
 
         <motion.div
-          variants={fadeIn("left", 0.5)}
+          variants={fadeIn("up", 0.5)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
@@ -111,12 +124,14 @@ const LatestNews = () => {
 
                 <div className="">
                   <NewsDate />
-                  <h3 className="my-3 text-2xl font-bold text-primary capitalize">
+                  <Link
+                    to={"/news/" + data.id}
+                    className="my-3 text-2xl font-bold text-primary capitalize"
+                  >
                     {data.title}
-                  </h3>
+                  </Link>
                   <p className="text-xs">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptate, recusandae!
+                    {data.description ? data.description.slice(0, 150) : ""}
                   </p>
                 </div>
               </div>
@@ -125,19 +140,17 @@ const LatestNews = () => {
 
           <div className="w-1/2 h-full hidden sm:block">
             <h3 className="mb-3 text-2xl font-bold text-primary capitalize">
-              Head line latest news
+              {news2.title}
             </h3>
             <div className="w-full h-[70%]">
               <ImageBox className="w-full h-full">
-                <Image src={image6} alt="news image" />
+                <Image src={path("news", news2.image)} alt="news image" />
               </ImageBox>
             </div>
             <div className="">
               <NewsDate />
-
               <p className="text-xs">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptate, recusandae!
+                {news2.description ? news2.description.slice(0, 150) : ""}
               </p>
             </div>
           </div>

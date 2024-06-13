@@ -6,7 +6,6 @@ import port from "../../../lib/port";
 
 const OurAbilities = () => {
   const [whyChooseUsDetails, setWhyChooseUsDetails] = useState([]);
-  // console.log(whyChooseUsDetails);
   useEffect(() => {
     let url = port("why-choose-us/details");
     fetch(url)

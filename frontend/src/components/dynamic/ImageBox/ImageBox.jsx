@@ -10,7 +10,7 @@ const ImageBox = ({ className, children, direction }) => {
       whileInView={"show"}
       viewport={{ once: false, amount: 0.3 }}
       className={cn(
-        "h-[200px] w-[300px] rounded bg-gray overflow-hidden",
+        "h-[200px] w-[300px] rounded relative overflow-hidden",
         className
       )}
     >

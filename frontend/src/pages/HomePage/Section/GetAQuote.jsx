@@ -9,7 +9,7 @@ const GetAQuote = () => {
     <Container bgColor="bg-white">
       <div className="grid md:gap-20 md:grid-cols-2 gap-5">
         <motion.div
-          variants={fadeIn("right", 0.5)}
+          variants={fadeIn("up", 0.5)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
@@ -17,7 +17,7 @@ const GetAQuote = () => {
           <Quote />
         </motion.div>
         <motion.div
-          variants={fadeIn("left", 0.5)}
+          variants={fadeIn("up", 0.5)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}

@@ -15,7 +15,6 @@ import port from "../../../lib/port";
 
 const Clients = () => {
   const [testimonial, setTestimonial] = useState([]);
-  console.log(testimonial);
   useEffect(() => {
     let url = port("testimonial");
     fetch(url)
@@ -28,9 +27,9 @@ const Clients = () => {
         sectionHeaderContainerClassNames="text-center mb-10"
         sectionHeaderHeadingClassNames="text-white drop-shadow-md"
         sectionHeaderSpanClassName="bg-primary mx-auto my-3"
-        sectionHeaderParagraphClassName=""
+        sectionHeaderParagraphClassName="text-white"
         title="Clients Feedbacks"
-        description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
+        description="Showcase expertise in specific sectors like construction, manufacturing, or energy."
         borderBottom={true}
         headerDescription={true}
       />

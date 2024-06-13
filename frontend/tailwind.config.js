@@ -12,29 +12,29 @@ export default {
     },
     backgroundColor: {
       body: "#F6FCFC",
-      primary: "#64b15f",
+      primary: "#4945b8",
       secondary: "#2552a3",
       gray: "#92989A",
       white: "#FFFFFF",
     },
     textColor: {
-      primary: "#64b15f",
+      primary: "#4945b8",
       secondary: "#2552a3",
       gray: "#92989A",
       body: "#F6FCFC",
       white: "#FFFFFF",
     },
     borderColor: {
-      primary: "#64b15f",
+      primary: "#4945b8",
       secondary: "#2552a3",
       white: "#FFFFFF",
     },
     outlineColor: {
-      primary: "#64b15f",
+      primary: "#4945b8",
       secondary: "#2552a3",
     },
     ringColor: {
-      primary: "#64b15f",
+      primary: "#4945b8",
       secondary: "#2552a3",
     }
   },

@@ -1,4 +1,4 @@
-import FrequentlyAskedQuestions from "../ServicesPage/Section/FrequentlyAskedQuestions";
+// import FrequentlyAskedQuestions from "../ServicesPage/Section/FrequentlyAskedQuestions";
 import GetInTouch from "./Section/GetInTouch";
 import WorldMap from "./Section/WorldMap";
 
@@ -7,7 +7,7 @@ const ContactPage = () => {
     <>
       <GetInTouch />
       <WorldMap />
-      <FrequentlyAskedQuestions />
+      {/* <FrequentlyAskedQuestions /> */}
     </>
   );
 };

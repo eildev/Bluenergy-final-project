@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 @font-face {
     font-family: "Inter" sans-serif;
     src: url("./assets/fonts/Inter/Inter-Black.ttf");
@@ -35,7 +38,7 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-    background: #1FBEF9;
+    background: #82e17c;
 }
 
 .pageLoader {
@@ -64,4 +67,18 @@ body {
     left: 0;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.swiper-button-next {
+    color: red;
+}
+
+.mySwiper {
+    --swiper-navigation-top-offset: 30%;
+}
+
+@media (max-width: 767px) {
+    .mySwiper {
+        --swiper-navigation-top-offset: 50%;
+    }
 }

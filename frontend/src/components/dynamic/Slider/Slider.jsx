@@ -17,35 +17,39 @@ import { Autoplay, Navigation } from "swiper/modules";
 
 const Slider = () => {
   return (
-    <section className="max-h-[520px] overflow-hidden">
+    <section className="lg:max-h-[500px] min-h-screen overflow-hidden relative">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
-        // autoplay={{
-        //   delay: 5000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
         navigation={true}
         modules={[Autoplay, Navigation]}
-        className="mySwiper max-h-full overflow-hidden"
+        className="mySwiper lg:h-full min-h-screen overflow-hidden relative"
+        style={{
+          "--swiper-navigation-color": "#82e17c",
+          // "--swiper-navigation-top-offset": "30%",
+        }}
       >
         <SwiperSlide>
-          <div className="relative min-h-full w-full">
+          <div className="relative md:min-h-full min-h-screen w-full">
             <img
               src={image3}
-              className="min-h-full w-full object-contain"
+              className="lg:min-h-full min-h-screen w-full object-cover"
               alt="home-banner image"
             />
             <div className="absolute top-0 left-0 w-full h-full bg-[#000] opacity-50 z-10"></div>
-            <div className="absolute top-1/3 left-1/3 -translate-x-1/3 -translate-y-1/2 z-10 text-white">
+            <div className="absolute lg:top-1/3 top-1/2 left-1/3 -translate-x-1/3 lg:-translate-y-1/3 -translate-y-1/2 z-10 text-white">
               <h2 className="text-2xl mb-2">POWERING PROGRESS</h2>
-              <h5 className="lg:text-[60px] md:text-3xl font-inter font-bold text-2xl text-primary mb-5">
-                Elevating Life
+              <h5 className="lg:text-[60px] md:text-3xl font-inter font-bold text-2xl text-primary lg:mb-5 mb-2">
+                Energy & Resource
               </h5>
-              <p className="text-white max-w-[500px] mb-2">
-                To offer pre-eminent Energy and Resources Management Services to
-                rapidly growing economy of Bangladesh.{" "}
+              <p className="text-white lg:max-w-[500px] w-full mb-2">
+                Provide efficient utilization of Energy and Resources Management
+                Services to rapidly growing economy of Bangladesh.{" "}
               </p>
               <button className="px-7 py-2 font-bold text-sm uppercase font-karla rounded bg-primary text-white">
                 Read More
@@ -54,22 +58,21 @@ const Slider = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative min-h-full w-full">
+          <div className="relative md:min-h-full min-h-screen w-full">
             <img
               src={image1}
-              className="min-h-full w-full object-contain"
+              className="lg:min-h-full min-h-screen w-full object-cover"
               alt="home-banner image"
             />
             <div className="absolute top-0 left-0 w-full h-full bg-[#000] opacity-50 z-10"></div>
-            <div className="absolute top-1/3 left-1/3 -translate-x-1/3 -translate-y-1/2 z-10 text-white">
+            <div className="absolute lg:top-1/3 top-1/2 left-1/3  -translate-x-1/3 lg:-translate-y-1/3 -translate-y-1/2 z-10 text-white">
               <h2 className="text-2xl mb-2">Empowering Progress</h2>
-              <h5 className="lg:text-[60px] md:text-3xl font-inter font-bold text-2xl text-primary mb-5">
-                Ensuring Power
+              <h5 className="lg:text-[60px] md:text-3xl font-inter font-bold text-2xl text-primary lg:mb-5 mb-2">
+                Innovation in Power
               </h5>
-              <p className="text-white max-w-[500px] mb-2">
-                we redefine power solutions with our Generator Assembly and
-                Supply services, embodying reliability, innovation, and
-                sustainability
+              <p className="text-white lg:max-w-[500px] w-full mb-2">
+                Redefining Power solutions with our Innovative Energy and Supply
+                services, embodying reliability, and sustainability
               </p>
               <button className="px-7 py-2 font-bold text-sm uppercase font-karla rounded bg-primary text-white">
                 Read More

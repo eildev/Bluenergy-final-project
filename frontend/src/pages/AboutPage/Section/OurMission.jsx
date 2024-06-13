@@ -9,7 +9,7 @@ import mission from "../../../assets/img/missionVission/vision-2.jpeg";
 const OurMission = () => {
   return (
     <Container>
-      <div className="grid md:grid-cols-2 lg:gap-20 gap-10">
+      <div className="grid lg:grid-cols-2 lg:gap-20 gap-10">
         <div className="">
           <motion.h2
             variants={fadeIn("down", 0.3)}

@@ -10,7 +10,6 @@ import port from "../../../lib/port";
 
 const OurServices = () => {
   const [services, setServices] = useState([]);
-  console.log(services);
   useEffect(() => {
     let url = port("services/details");
     fetch(url)

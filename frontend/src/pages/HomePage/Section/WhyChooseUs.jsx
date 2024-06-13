@@ -6,17 +6,7 @@ import WhyChooseUsServices from "../../../element/WhyChooseUsServices";
 import port from "../../../lib/port";
 
 const WhyChooseUs = () => {
-  // const [whyChooseUs, setWhyChooseUs] = useState([]);
-  // // const path = path("frontend/uploads/about/");
-  // console.log(whyChooseUs);
-  // useEffect(() => {
-  //   let url = port("why-choose-us");
-  //   fetch(url)
-  //     .then((response) => response.json())
-  //     .then((responseData) => setWhyChooseUs(responseData.allData));
-  // }, []);
   const [whyChooseUsDetails, setWhyChooseUsDetails] = useState([]);
-  // console.log(whyChooseUsDetails);
   useEffect(() => {
     let url = port("why-choose-us/details");
     fetch(url)

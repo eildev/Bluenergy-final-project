@@ -22,11 +22,14 @@ const CompanyHistory = () => {
           viewport={{ once: false, amount: 0.3 }}
           className=" text-white"
         >
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
-          ducimus dignissimos. Doloremque omnis, culpa quae blanditiis at hic
-          nam velit et impedit nostrum laudantium sunt itaque maxime accusantium
-          recusandae ut atque, aliquam amet id voluptatem sint perspiciatis.
-          Natus, suscipit omnis.
+          Bluenergy Solutions Limited (BSL) has been established to offer
+          sustainable energy and resource solutions to the Government, the
+          Private Sector, and Export Oriented Foreign Companies operating in
+          Bangladesh. The Management Team at BSL is made up of professionals in
+          Engineering, Finance, and Business Development, who have been
+          delivering integrated energy, oil and gas resource-related efficient
+          solutions in Bangladesh, Australia, China, and major economies in the
+          Asia Pacific region for the last 35 years.
         </motion.p>
 
         <br />
@@ -38,10 +41,19 @@ const CompanyHistory = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="text-white"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsa
-          omnis beatae ratione, illum accusamus non voluptatem, distinctio
-          recusandae dignissimos blanditiis dolor libero fugiat voluptas eos qui
-          eum tempore quos.
+          During this period, the team behind BSL has built a successful track
+          record in delivering an optimum return on investment for new efficient
+          energy systems designed to produce efficient power, heating, and
+          cooling while reducing the facilities’ energy and carbon emissions
+          footprint. Often these solutions included renewable energy systems
+          coupled with energy-efficient technologies to produce a minimum carbon
+          footprint for both commercial and industrial facilities. We gained and
+          continue to refine our knowledge and unique expertise from an
+          exclusive focus on delivering energy and resources engineering and
+          management projects while working across a wide range of commercial
+          technologies, giving BSL unparalleled access and insights on the
+          cost/benefits of major manufacturers of power generation and
+          energy-related products.
         </motion.p>
       </div>
     </Container>

@@ -1,3 +1,3 @@
 export default function port(...something) {
-    return `http://eng.sobrokom.store/api/${something}`;
+    return `https://eng.sobrokom.store/api/${something}`;
 }

@@ -1,11 +1,12 @@
 import logoImage from "../../../assets/img/logo/logo.png";
+// import logoImage from "../../../assets/img/logo/logo.png";
 import cn from "../../../lib/cn";
 
 const Logo = ({ className }) => {
   return (
-    <div>
+    <div className="">
       <img
-        className={cn("max-w-[120px]", className)}
+        className={cn("max-w-[120px] h-[45px] object-contain", className)}
         src={logoImage}
         alt="logo Image"
       />

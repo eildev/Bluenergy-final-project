@@ -13,7 +13,6 @@ import port from "../../lib/port";
 
 const AboutPage = () => {
   const [aboutData, setAboutData] = useState([]);
-  // console.log(aboutData);
   useEffect(() => {
     let url = port("about/data");
     fetch(url)
@@ -31,11 +30,6 @@ const AboutPage = () => {
         {aboutData.map((data) => (
           <Hero key={data.id} data={data} />
         ))}
-        {/* <Hero
-          title="About our company"
-          description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt quam expedita nulla totam, sit odit magni sequi hic quasi, vero rerum dicta esse. Neque, dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, nobis, architecto cupiditate delectus eum sunt, tempora voluptas illo molestias perferendis accusantium? !"
-          description2="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt quam expedita nulla totam, sit odit magni sequi hic quasi, vero rerum dicta esse. Neque, dolore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, nobis, architecto cupiditate delectus eum sunt, tempora voluptas illo molestias perferendis accusantium? !"
-        /> */}
       </Container>
       <OurVision />
       <OurMission />

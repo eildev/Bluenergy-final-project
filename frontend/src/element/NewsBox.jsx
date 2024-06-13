@@ -1,19 +1,21 @@
+import { Link } from "react-router-dom";
 import ImageBox from "../components/dynamic/ImageBox/ImageBox";
+import path from "../lib/path";
 import Image from "./Image";
 
-const NewsBox = ({ image }) => {
+const NewsBox = ({ data }) => {
+  const { id, title, image } = data;
   return (
-    <div className="flex justify-between items-center gap-5">
+    <div className="md:flex grid justify-between items-center gap-5">
       <div>
-        <ImageBox className="h-[100px] w-[100px]">
-          <Image src={image} />
+        <ImageBox className="h-[100px] md:w-[100px] w-full ">
+          <Image src={path("news", image)} />
         </ImageBox>
       </div>
       <div>
-        <p className="text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facilis
-          aliquam eligendi facere soluta rerum! Fugit aliquid quo omnis non.
-        </p>
+        <Link to={"/news/" + id}>
+          <p className="text-white">{title}</p>
+        </Link>
       </div>
     </div>
   );

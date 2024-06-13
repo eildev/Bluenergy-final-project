@@ -2,12 +2,12 @@ import Container from "../../../components/dynamic/Container/Container";
 import SmallHero from "../../../components/dynamic/SmallHero/SmallHero";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../lib/variants";
-import vision from "../../../assets/img/missionVission/vision.jpg";
+import vision from "../../../assets/img/missionVission/1_br4pzwXodMpfwvhs-6cJ9A.jpg";
 
 const OurVision = () => {
   return (
     <Container bgColor="bg-primary">
-      <div className="grid md:grid-cols-2 lg:gap-20 gap-10">
+      <div className="grid lg:grid-cols-2 lg:gap-20 gap-10">
         <div className="">
           <motion.h2
             variants={fadeIn("down", 0.3)}

@@ -5,17 +5,17 @@ const SocialIcon = ({ link, website }) => {
   return (
     <div className="flex gap-5">
       <a href={link}>
-        <span className="text-2xl text-primary cursor-pointer">
+        <span className="text-xl text-primary cursor-pointer">
           <BsFacebook />
         </span>
       </a>
       <a href={website}>
-        <span className="text-2xl text-primary cursor-pointer">
+        <span className="text-xl text-primary cursor-pointer">
           <BsTwitter />
         </span>
       </a>
       <a href={website}>
-        <span className="text-2xl text-primary cursor-pointer">
+        <span className="text-xl text-primary cursor-pointer">
           <BsInstagram />
         </span>
       </a>

@@ -60,17 +60,15 @@ const Footer = () => {
     let url = port("footer/data");
     fetch(url)
       .then((response) => response.json())
-      .then((responseData) => setData(responseData.footers));
+      .then((responseData) => setData(responseData.footers.slice(0, 1)));
   }, []);
 
   useEffect(() => {
     let url = port("services/details");
     fetch(url)
       .then((response) => response.json())
-      .then((responseData) => setServices(responseData.allData));
+      .then((responseData) => setServices(responseData.allData.slice(0, 6)));
   }, []);
-
-  // console.log(data);
   return (
     <footer className=" border-t-4 border-primary ">
       <div className="container mx-auto md:px-10 px-5">

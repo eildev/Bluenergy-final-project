@@ -5,7 +5,7 @@ import icon from "../../../assets/icons/main/award.svg";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../lib/variants";
 import Image from "../../../element/Image";
-import achivement from "../../../assets/img/achivement/achivement.jpg";
+import achivement from "../../../assets/img/achivement/achivement2.webp";
 
 const Achievement = () => {
   return (
@@ -40,9 +40,9 @@ const Achievement = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="lg:mt-10"
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-            ipsum iusto vitae eius inventore tempora eaque cumque voluptatibus
-            dicta dolores.
+            Our team of engineers spearheaded the design and construction of the
+            city`s first net-zero energy office building, utilizing innovative
+            solar power integration and energy-efficient building materials.
           </motion.p>
 
           <motion.div
@@ -53,13 +53,13 @@ const Achievement = () => {
             className="bg-secondary rounded-md w-full p-10 flex justify-between sm:flex-row flex-col items-start lg:mt-20 mt-10 gap-3"
           >
             <motion.div
-              variants={fadeIn("right", 0.6)}
+              variants={fadeIn("up", 0.6)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.3 }}
             >
               <motion.span
-                variants={fadeIn("right", 0.7)}
+                variants={fadeIn("up", 0.7)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
@@ -68,7 +68,7 @@ const Achievement = () => {
                 <img src={icon} className="h-[30px]" alt="" /> Award
               </motion.span>
               <motion.h4
-                variants={fadeIn("right", 0.8)}
+                variants={fadeIn("up", 0.8)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
@@ -77,24 +77,24 @@ const Achievement = () => {
                 Best Company
               </motion.h4>
               <motion.p
-                variants={fadeIn("right", 0.9)}
+                variants={fadeIn("up", 0.9)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
                 className=" text-white"
               >
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Eligendi, saepe.
+                This achievement sets a new standard for sustainable
+                construction and reduces the building`s environmental impact.
               </motion.p>
             </motion.div>
             <motion.div
-              variants={fadeIn("left", 0.6)}
+              variants={fadeIn("up", 0.6)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.3 }}
             >
               <motion.div
-                variants={fadeIn("left", 0.7)}
+                variants={fadeIn("up", 0.7)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
@@ -110,7 +110,7 @@ const Achievement = () => {
                 <span className="text-white">(5020 Reviews)</span>
               </motion.div>
               <motion.h4
-                variants={fadeIn("left", 0.8)}
+                variants={fadeIn("up", 0.8)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
@@ -119,14 +119,14 @@ const Achievement = () => {
                 High Rating reviews
               </motion.h4>
               <motion.p
-                variants={fadeIn("left", 0.9)}
+                variants={fadeIn("up", 0.9)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
                 className=" text-white"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-                praesentium.
+                Pioneered Self-Healing Concrete Technology for Enhanced
+                Infrastructure Durability.
               </motion.p>
             </motion.div>
           </motion.div>

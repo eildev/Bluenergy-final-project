@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const SmallHero = ({ title, description, className, src }) => {
   return (
     <div className="grid md:grid-cols-2 md:gap-10 gap-5 w-full">
-      <ImageBox className="w-[250px]">
+      <ImageBox className="md:w-[250px] w-full">
         <Image src={src}></Image>
       </ImageBox>
       <div>

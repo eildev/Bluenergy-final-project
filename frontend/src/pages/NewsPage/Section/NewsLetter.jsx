@@ -5,210 +5,71 @@ import Header from "../../../element/Header";
 import IconStatus from "../../../element/IconStatus";
 import { CiShare2 } from "react-icons/ci";
 import { FaRegHeart } from "react-icons/fa";
-import { FaArrowRightLong } from "react-icons/fa6";
 import NewsBox from "../../../element/NewsBox";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../lib/variants";
-import newsImage1 from "../../../assets/img/news/news-1.jpg";
-import newsImage2 from "../../../assets/img/news/news-2.jpg";
-import newsImage3 from "../../../assets/img/news/news-3.jpg";
-import newsImage4 from "../../../assets/img/news/news-4.jpg";
-import newsImage5 from "../../../assets/img/news/news-5.jpg";
-import newsImage6 from "../../../assets/img/news/news-6.jpeg";
 import Image from "../../../element/Image";
+import { useEffect, useState } from "react";
+import port from "../../../lib/port";
+import path from "../../../lib/path";
+import { Link } from "react-router-dom";
 
 const NewsLetter = () => {
+  const [news, setNews] = useState([]);
+  useEffect(() => {
+    let url = port("news");
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => setNews(data.allData.slice(0, 4)));
+  }, []);
+  const [news2, setNews2] = useState([]);
+  useEffect(() => {
+    let url = port("news");
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => setNews2(data.allData.slice(0, 1)));
+  }, []);
   return (
     <Container>
       <div className="grid lg:grid-cols-2 lg:gap-20 gap-10">
-        <motion.div
-          variants={fadeIn("right", 0.5)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.3 }}
-          className="lg:pr-20"
-        >
-          <div className="mb-5">
-            <ImageBox className="relative h-[300px] w-full">
-              <IconStatus>
-                <span className="text-xl cursor-pointer">
-                  <CiShare2 />
-                </span>
-                <span className="text-xl cursor-pointer">
-                  <FaRegHeart />
-                </span>
-              </IconStatus>
-              <Image src={newsImage1} />
-            </ImageBox>
-          </div>
-          <div>
-            <p className="uppercase mb-5">November 3, 2023 In Power Plant</p>
-            <Header className="mb-5">Head Line Latest News This Week</Header>
-            <p className="mb-5">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Quibusdam, fuga?
-            </p>
+        {news2.map((news) => (
+          <motion.div
+            key={news.id}
+            variants={fadeIn("up", 0.5)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.3 }}
+            className="lg:pr-20 sm:hidden lg:block block"
+          >
+            <div className="mb-5 pt-20 border-t-2 border-primary">
+              <ImageBox className="relative h-[300px] w-full">
+                <IconStatus>
+                  <span className="text-xl cursor-pointer">
+                    <CiShare2 />
+                  </span>
+                  <span className="text-xl cursor-pointer">
+                    <FaRegHeart />
+                  </span>
+                </IconStatus>
+                <Image src={path("news", news.image)} />
+              </ImageBox>
+            </div>
+            <div>
+              <p className="uppercase mb-5">November 3, 2023 In Power Plant</p>
+              <Header className="mb-5">{news.title}</Header>
+              <p className="mb-5">{news.description.slice(0, 200)}</p>
 
-            <Button
-              title="Read more"
-              className="bg-primary text-white font-normal"
-            ></Button>
-          </div>
-        </motion.div>
+              <Link to={"/news/" + news.id}>
+                <Button
+                  title="Read more"
+                  className="bg-primary text-white font-normal"
+                ></Button>
+              </Link>
+            </div>
+          </motion.div>
+        ))}
         <motion.div
-          variants={fadeIn("left", 0.5)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.3 }}
-          className="lg:pr-20 lg:hidden sm:block hidden"
-        >
-          <div className="mb-5 pt-20 border-t-2 border-primary">
-            <ImageBox className="relative h-[300px] w-full">
-              <IconStatus>
-                <span className="text-xl cursor-pointer">
-                  <CiShare2 />
-                </span>
-                <span className="text-xl cursor-pointer">
-                  <FaRegHeart />
-                </span>
-              </IconStatus>
-              <Image src={newsImage2} />
-            </ImageBox>
-          </div>
-          <div>
-            <p className="uppercase mb-5">November 3, 2023 In Power Plant</p>
-            <Header className="mb-5">Head Line Latest News This Week</Header>
-            <p className="mb-5">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Quibusdam, fuga?
-            </p>
-
-            <Button
-              title="Read more"
-              className="bg-primary text-white font-normal"
-            ></Button>
-          </div>
-        </motion.div>
-        <motion.div
-          variants={fadeIn("left", 0.5)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.3 }}
-          className="lg:pl-20"
-        >
-          <div className="bg-white w-full rounded-md shadow-sm p-10">
-            <input
-              type="search"
-              placeholder="Search"
-              className="border-2 border-primary rounded-md w-full h-[40px] text-center outline-none placeholder:uppercase"
-            />
-
-            <Header className="my-5">News</Header>
-
-            <ul className="my-5 grid gap-4">
-              <li className="text-primary">
-                <p className="underline flex items-center">
-                  <span>
-                    <FaArrowRightLong />
-                  </span>
-                  Lorem ipsum dolor sit amet.
-                </p>
-              </li>
-              <li>
-                <p className="underline flex items-center">
-                  <span>
-                    <FaArrowRightLong />
-                  </span>
-                  Lorem ipsum dolor sit amet.
-                </p>
-              </li>
-              <li>
-                <p className="underline flex items-center">
-                  <span>
-                    <FaArrowRightLong />
-                  </span>
-                  Lorem ipsum dolor sit amet.
-                </p>
-              </li>
-              <li>
-                <p className="underline flex items-center">
-                  <span>
-                    <FaArrowRightLong />
-                  </span>
-                  Lorem ipsum dolor sit amet.
-                </p>
-              </li>
-              <li>
-                <p className="underline flex items-center">
-                  <span>
-                    <FaArrowRightLong />
-                  </span>
-                  Lorem ipsum dolor sit amet.
-                </p>
-              </li>
-              <li>
-                <p className="underline flex items-center">
-                  <span>
-                    <FaArrowRightLong />
-                  </span>
-                  Lorem ipsum dolor sit amet.
-                </p>
-              </li>
-              <li>
-                <p className="underline flex items-center">
-                  <span>
-                    <FaArrowRightLong />
-                  </span>
-                  Lorem ipsum dolor sit amet.
-                </p>
-              </li>
-              <li>
-                <p className="underline flex items-center">
-                  <span>
-                    <FaArrowRightLong />
-                  </span>
-                  Lorem ipsum dolor sit amet.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </motion.div>
-        <motion.div
-          variants={fadeIn("right", 0.5)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.3 }}
-          className="lg:pr-20 sm:hidden lg:block block"
-        >
-          <div className="mb-5 pt-20 border-t-2 border-primary">
-            <ImageBox className="relative h-[300px] w-full">
-              <IconStatus>
-                <span className="text-xl cursor-pointer">
-                  <CiShare2 />
-                </span>
-                <span className="text-xl cursor-pointer">
-                  <FaRegHeart />
-                </span>
-              </IconStatus>
-              <Image src={newsImage3} />
-            </ImageBox>
-          </div>
-          <div>
-            <p className="uppercase mb-5">November 3, 2023 In Power Plant</p>
-            <Header className="mb-5">Head Line Latest News This Week</Header>
-            <p className="mb-5">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Quibusdam, fuga?
-            </p>
-
-            <Button
-              title="Read more"
-              className="bg-primary text-white font-normal"
-            ></Button>
-          </div>
-        </motion.div>
-        <motion.div
-          variants={fadeIn("left", 0.5)}
+          variants={fadeIn("up", 0.5)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
@@ -217,10 +78,9 @@ const NewsLetter = () => {
           <div className="bg-secondary w-full rounded-md shadow-sm p-10">
             <Header className="mb-10 text-white">Recent Post</Header>
             <div className="grid gap-5">
-              <NewsBox image={newsImage4} />
-              <NewsBox image={newsImage5} />
-              <NewsBox image={newsImage6} />
-              <NewsBox image={newsImage2} />
+              {news.map((data) => (
+                <NewsBox key={data.id} data={data} />
+              ))}
             </div>
           </div>
         </motion.div>

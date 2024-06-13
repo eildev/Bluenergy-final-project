@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import limitText from "../lib/limitText";
 import path from "../lib/path";
 // import port from "../lib/port";
 import { fadeIn } from "../lib/variants";
@@ -6,6 +8,7 @@ import { motion } from "framer-motion";
 
 const Card = ({ data }) => {
   const {
+    id,
     services_details_icon,
     services_details_title,
     services_details_description,
@@ -19,22 +22,24 @@ const Card = ({ data }) => {
       viewport={{ once: false, amount: 0.3 }}
       className="border-2 border-primary p-7 rounded-md"
     >
-      <div className="h-[150px] bg-primary w-full rounded-md flex justify-center items-center mb-5">
-        <span className="text-white">
+      <Link to={"/services/" + id}>
+        <div className="h-[150px] bg-primary w-full rounded-md flex justify-center items-center mb-5">
           <img
             src={path("services_image", services_details_icon)}
-            className="h-[80px]"
+            className="h-[80px] object-cover"
             alt=""
           />
-        </span>
-      </div>
-      <div>
-        <h4 className="text-lg font-bold mb-5 text-white">
-          {services_details_title}
-        </h4>
-        <p className="mb-5 text-white">{services_details_description}</p>
-        <Button title="Learn More" className="bg-primary text-white" />
-      </div>
+        </div>
+        <div>
+          <h4 className="text-lg font-bold mb-5 text-white">
+            {limitText(services_details_title, 50)}
+          </h4>
+          <p className="mb-5 text-white">
+            {limitText(services_details_description, 150)}
+          </p>
+          <Button title="Learn More" className="bg-primary text-white" />
+        </div>
+      </Link>
     </motion.div>
   );
 };

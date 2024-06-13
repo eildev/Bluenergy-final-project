@@ -7,7 +7,6 @@ import port from "../../../lib/port";
 
 const OurSisterConcern = () => {
   const [sisters, setSisters] = useState([]);
-  console.log(sisters);
   useEffect(() => {
     let url = port("partners/details");
     fetch(url)

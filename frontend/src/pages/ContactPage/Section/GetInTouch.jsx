@@ -18,8 +18,8 @@ const GetInTouch = () => {
         >
           <Header className="text-3xl mb-5 text-secondary">Get In Touch</Header>
           <p className="mb-5">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-            officia sequi quibusdam quo, atque necessitatibus.
+            We appreciate your interest in Bluenergy. For any inquiries, please
+            don`t hesitate to contact us using the following methods.
           </p>
           <div className="grid gap-5">
             {contactsData.map((data) => (

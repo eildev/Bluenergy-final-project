@@ -6,7 +6,6 @@ import port from "../../../lib/port";
 
 const Activities = () => {
   const [activity, SetActivity] = useState([]);
-  // console.log(activity);
   useEffect(() => {
     let url = port("overview/data");
     fetch(url)

@@ -10,7 +10,6 @@ import port from "../../../lib/port";
 
 const ProfessionalTeam = () => {
   const [managingTeams, setManagingTeams] = useState([]);
-  console.log(managingTeams);
   useEffect(() => {
     let url = port("managing-team");
     fetch(url)
@@ -45,7 +44,7 @@ const ProfessionalTeam = () => {
         viewport={{ once: false, amount: 0.3 }}
         className="w-full mx-auto text-center mt-10"
       >
-        <Button title=" view All" className="bg-primary text-white italic" />
+        <Button title=" view All" className="bg-secondary text-white italic" />
       </motion.div>
     </Container>
   );

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import SearchBar from "./SearchBar";
+// import SearchBar from "./SearchBar";
+// import route from "../../../lib/route";
 
 // const items = [
 //   {
@@ -42,9 +43,9 @@ import SearchBar from "./SearchBar";
 const MenuItem = () => {
   return (
     <>
-      <li className="lg:hidden">
+      {/* <li className="lg:hidden">
         <SearchBar />
-      </li>
+      </li> */}
       <li className="text-md uppercase font-semibold text-[#fff]">
         <Link to="/">Home</Link>
       </li>
@@ -63,6 +64,14 @@ const MenuItem = () => {
       <li className="text-md uppercase font-semibold text-[#fff]">
         <Link to="/contact">Contact</Link>
       </li>
+      {/* <li className="text-md uppercase font-semibold my-3 lg:hidden">
+        <a
+          href={route("admin/login")}
+          className="px-7 py-2 font-bold text-sm uppercase font-karla rounded bg-white"
+        >
+          Login
+        </a>
+      </li> */}
     </>
   );
 };

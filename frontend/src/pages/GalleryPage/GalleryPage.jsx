@@ -7,7 +7,6 @@ import port from "../../lib/port";
 
 const GalleryPage = () => {
   const [gallery, setGallery] = useState([]);
-  // console.log(gallery);
   useEffect(() => {
     let url = port("gallery");
     fetch(url)
@@ -18,9 +17,7 @@ const GalleryPage = () => {
     <>
       <Banner
         bannerImage={image}
-        bannerText=" Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Provident, nisi.  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Provident, nisi."
+        bannerText="Our research team developed a revolutionary self-healing concrete formula that automatically repairs minor cracks, extending infrastructure lifespan and reducing maintenance costs."
         bannerTitle="Gallery"
       />
       <GallerySection gallery={gallery} />

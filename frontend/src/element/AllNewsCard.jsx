@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import path from "../lib/path";
 import { fadeIn } from "../lib/variants";
 import Button from "./Button";
@@ -6,7 +7,7 @@ import NewsDate from "./NewsDate";
 import { motion } from "framer-motion";
 
 const AllNewsCard = ({ data }) => {
-  const { title, direction, image } = data;
+  const { id, title, direction, image } = data;
   return (
     <motion.div
       variants={fadeIn(direction, 0.5)}
@@ -25,10 +26,12 @@ const AllNewsCard = ({ data }) => {
       <div className="p-5">
         <NewsDate />
         <Header className="text-lg my-4">{title}</Header>
-        <Button
-          title="Read more"
-          className="bg-primary text-white font-medium"
-        />
+        <Link to={"/news/" + id}>
+          <Button
+            title="Read more"
+            className="bg-primary text-white font-medium"
+          />
+        </Link>
       </div>
     </motion.div>
   );

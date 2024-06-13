@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import image2 from "../../../assets/img/about/about-2.jpg";
 import image3 from "../../../assets/img/about/about-3.jpg";
 import path from "../../../lib/path";
+import limitText from "../../../lib/limitText";
 
 const Hero = ({ data }) => {
   const { title, description, image } = data;
@@ -26,7 +27,7 @@ const Hero = ({ data }) => {
           viewport={{ once: false, amount: 0.3 }}
           className="text-[#2D2C2C] leading-8"
         >
-          {description}
+          {limitText(description, 800)}
         </motion.p>
         {/* <motion.p
           variants={fadeIn("up", 0.2)}

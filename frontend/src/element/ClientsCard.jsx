@@ -3,9 +3,9 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { fadeIn } from "../lib/variants";
 import path from "../lib/path";
+import limitText from "../lib/limitText";
 
 const ClientsCard = ({ data }) => {
-  // const ClientsCard = () => {
   const { name, image, designation, message } = data;
   return (
     <motion.div
@@ -30,16 +30,7 @@ const ClientsCard = ({ data }) => {
             <span className="text-white absolute top-0 -left-4">
               <FaQuoteLeft />
             </span>
-            {message}
-            {/* <span className="hidden sm:block">
-              obcaecati esse vel suscipit quod perferendis eligendi deserunt
-              accusamus commodi, nisi assumenda, incidunt dolores
-            </span>
-            <span className="hidden lg:block">
-              similique corrupti dolorem voluptatem laboriosam soluta recusandae
-              distinctio eum debitis reiciendis? Dolorum natus est, commodi
-              sequi lorem,
-            </span> */}
+            {limitText(message, 350)}
             <p className="text-white text-right">
               <FaQuoteRight />
             </p>

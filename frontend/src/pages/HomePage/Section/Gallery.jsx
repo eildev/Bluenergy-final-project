@@ -10,12 +10,14 @@ import port from "../../../lib/port";
 
 const Gallery = ({ gallery }) => {
   const [category, setCategory] = useState([]);
-  // console.log(aboutData);
   useEffect(() => {
     let url = port("category");
     fetch(url)
       .then((response) => response.json())
-      .then((responseData) => setCategory(responseData.allData.slice(0, 6)));
+      .then((responseData) => {
+        const sortedData = responseData.allData.sort((a, b) => b.id - a.id);
+        setCategory(sortedData.slice(0, 6));
+      });
   }, []);
   return (
     <Container>
@@ -37,7 +39,7 @@ const Gallery = ({ gallery }) => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.3 }}
-        className="sm:flex sm:justify-center items-center sm:gap-10 mb-10 gap-3 grid grid-cols-2"
+        className="lg:flex lg:justify-center items-center lg:gap-5 mb-10 gap-3 grid grid-cols-2"
       >
         {category.map((data) => (
           <Button
